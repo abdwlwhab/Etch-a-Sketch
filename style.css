@@ -1,0 +1,21 @@
+body{
+    display: flex;
+}
+
+.container {
+  border: 2px solid black;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+}
+
+.child {
+  border: 1px solid gray;
+  box-sizing: border-box;
+  flex-grow: 1;
+  
+}
