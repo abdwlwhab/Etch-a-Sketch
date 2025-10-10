@@ -26,7 +26,7 @@ function makeDivs(num){ //
     //change div colore
     const hover = document.querySelectorAll('.child')
     hover.forEach(div => {
-    div.addEventListener('mouseenter', () => div.style.background = 'gray');
+    div.addEventListener('mouseenter', () => div.style.background = 'rgb(8, 207, 158)');
     });
     
 }
@@ -36,7 +36,8 @@ const gridbtn =document.querySelector('.gridBtn')
 let newBtn = gridbtn.addEventListener('click', ()=>makeDivs(prompt('1-100')))
 
 const restBtn = document.querySelector('.rest')
-restBtn.addEventListener('click', ()=>{document.querySelectorAll('.child').forEach(div => div.style.background = 'white',)})
+restBtn.addEventListener('click', ()=>{document.querySelectorAll('.child').forEach(div => {div.style.background = 'rgba(255, 255, 255, 0.2)';
+    div.classList.remove('toggle');})})
 
 
 const borderBtn = document.querySelector('.borderOff');

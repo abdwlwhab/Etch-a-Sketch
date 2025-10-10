@@ -1,25 +1,47 @@
-body{
-    display: flex;
-    
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
 }
 
 .container {
-  border: 2px solid black;
-  box-sizing: border-box;
-  width: 400px;
-  height: 400px;
+  margin-top: 30px;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
-  
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
   
 }
 
 .child {
-  border: 1px solid black;
   box-sizing: border-box;
-  flex-grow: 1;
-  
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.05);
+  transition: background 0.2s ease;
+}
+.child:hover {
+  background: rgba(255,255,255,0.6);
 }
 
 .child.toggle {
@@ -27,4 +49,72 @@ body{
   box-sizing: border-box;
   flex-grow: 1;
   
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(0, 255, 255, 0.3);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buttons{
+  display: flex;
+  gap: 40px;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* عند تمرير الماوس */
+button:hover {
+  background: linear-gradient(135deg, #5f85db, #1b1f3b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* عند الضغط */
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* تخصيص ألوان لو عايز أزرار مختلفة */
+.reset {
+  background: linear-gradient(135deg, #f85032, #e73827);
+}
+.reset:hover {
+  background: linear-gradient(135deg, #ff6a4d, #f13b2d);
+}
+
+.borderOff {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+.borderOff:hover {
+  background: linear-gradient(135deg, #5ae0b5, #1c69b1);
+}
+
+.gridBtn {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+.gridBtn:hover {
+  background: linear-gradient(135deg, #ffd166, #ffe066);
 }
