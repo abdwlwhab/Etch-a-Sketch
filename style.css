@@ -16,7 +16,14 @@ body{
 }
 
 .child {
-  border: 1px solid gray;
+  border: 1px solid black;
+  box-sizing: border-box;
+  flex-grow: 1;
+  
+}
+
+.child.toggle {
+  border: 0px solid black;
   box-sizing: border-box;
   flex-grow: 1;
   

@@ -31,7 +31,13 @@ function makeDivs(num){ //
     
 }
 
-makeDivs(3)
+
+const gridbtn =document.querySelector('.gridBtn')
+let newBtn = gridbtn.addEventListener('click', ()=>makeDivs(prompt('1-100')))
+
+const restBtn = document.querySelector('.rest')
+restBtn.addEventListener('click', ()=>{document.querySelectorAll('.child').forEach(div => div.style.background = 'white',)})
 
 
-
+const borderBtn = document.querySelector('.borderOff');
+borderBtn.addEventListener('click',()=>{document.querySelectorAll('.child').forEach(child => child.classList.toggle('toggle'))})
